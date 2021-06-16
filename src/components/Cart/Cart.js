@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Cart.module.css";
+import Modal from "../UI/Modal";
 
 const Cart = props => {
     const cartItems = <ul className={classes.cartItems}>{[{
@@ -12,17 +13,17 @@ const Cart = props => {
     ))}</ul>;
 
     return (
-        <div>
+        <Modal>
             {cartItems}
             <div className={classes.total}>
                 <span>Total Amount</span>
                 <span>35.98</span>
             </div>
-            <div className={classes.actions}>Action
+            <div className={classes.actions}>
                 <button className={classes.buttonAlt}>Close</button>
                 <button className={classes.button}>Order</button>
             </div>
-        </div>
+        </Modal>
     )
 };
 
