@@ -5,12 +5,12 @@ import HeaderCartButton from "./HeaderCartButton";
 // import mealsImg from "../../assets/meals.jpeg"
 const imgURL = "https://appgrooves.com/cdn/lifegoal/220/e/53014-45519-56524-56048_w1200.png"
 
-const Header = () => {
+const Header = props => {
     return (
         <>
             <header className={classes.header}>
                 <h1>E-meals</h1>
-                <HeaderCartButton/>
+                <HeaderCartButton onClick={props.onShowCart}/>
             </header>
             <div className={classes["main-image"]}>
                 <img src={imgURL} alt="Food food food!"/>
