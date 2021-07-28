@@ -21,7 +21,7 @@ const Cart = props => {
             setIsCheckout(true);
         };
 
-        const cartItems = <ul className={classes["cart-item"]}>{cartCtx.items.map(cart => (
+        const cartItems = <ul className={classes["cart-items"]}>{cartCtx.items.map(cart => (
             <CartItem
                 key={cart.id}
                 name={cart.name}
